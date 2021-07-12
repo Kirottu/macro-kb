@@ -1,0 +1,12 @@
+[Unit]
+Description=Keyboard macros
+After=graphical.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+ExecStart=/usr/local/bin/macro-kb
+
+[Install]
+WantedBy=graphical.target
