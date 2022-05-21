@@ -1,5 +1,4 @@
 use std::{
-    collections::HashMap,
     env,
     io::{self, BufRead, BufReader, Write},
     os::unix::net::UnixListener,
