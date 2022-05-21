@@ -6,7 +6,7 @@ After=graphical.target
 Type=simple
 Restart=always
 RestartSec=1
-ExecStart=/usr/local/bin/macro-kb
+ExecStart=/usr/local/bin/macro-kb-root
 
 [Install]
 WantedBy=graphical.target

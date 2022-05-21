@@ -6,5 +6,13 @@ edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[[bin]]
+name = "macro-kb-user"
+path = "src/user-server.rs"
+
+[[bin]]
+name = "macro-kb-root"
+path = "src/root-client.rs"
+
 [dependencies]
 evdev-rs = "0.5.0"
