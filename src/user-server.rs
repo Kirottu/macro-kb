@@ -35,8 +35,6 @@ fn main() {
     let mut config = config::parse_config(&config_path).expect("Unable to parse config");
     let listener = UnixListener::bind(&socket_path).expect("Failed to bind to socket");
 
-    println!("{:?}", config);
-
     println!("Waiting for root daemon to connect...");
 
     let mut stream = match listener.accept() {
