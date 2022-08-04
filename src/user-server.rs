@@ -16,20 +16,8 @@ fn main() {
     let socket_path = env::var("MACRO_KB_SOCKET").unwrap_or("/tmp/macro-kb.sock".to_string());
 
     if Path::new(&socket_path).exists() {
-        loop {
-            println!("Socket already exists, delete it? [y/n]: ");
-            let mut result = String::new();
-            io::stdin()
-                .read_line(&mut result)
-                .expect("Failed to read line");
-            if result.trim() == "y" {
-                std::fs::remove_file(&socket_path).expect("Failed to delete socket");
-                break;
-            } else if result.trim() == "n" {
-                println!("Failed to acquire socket");
-                return;
-            }
-        }
+        println!("Socket already exists, is the daemon already running?");
+        return;
     }
 
     let mut config = config::parse_config(&config_path).expect("Unable to parse config");
